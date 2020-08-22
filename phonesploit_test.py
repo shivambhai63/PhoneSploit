@@ -172,7 +172,7 @@ def cls():
 		os.system('clear')
 
 #==============================
-#Main
+#main_linux
 def main_linux():
 
     page_num = 1
@@ -182,9 +182,9 @@ def main_linux():
     try:
         device_name = input (arrow+" phonesploit"+Fore.RED + "(connect_phone) "+Fore.WHITE + "> ")
     except KeyboardInterrupt:
-        main()
+        main_linux()
     if device_name == '':
-        main()
+        main_linux()
     if device_name == '99':
         exit()
     os.system("adb connect "+device_name+":5555")
@@ -197,10 +197,10 @@ def main_linux():
 
         elif option  ==  '2':
             os.system("adb disconnect")
-            main()
+            main_linux()
 
         elif option == '3':
-            main()
+            main_linux()
 
         elif option  == '4':
             os.system("adb -s "+device_name+" shell")
